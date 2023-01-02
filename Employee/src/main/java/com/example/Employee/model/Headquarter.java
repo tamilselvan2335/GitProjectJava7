@@ -26,7 +26,7 @@ public class Headquarter {
 	
 	@OneToMany(cascade = CascadeType.ALL,
             mappedBy = "headquarter")
- private List<EmployeeDetails> employeeDetails;
+ private List<Employees> employeeDetails;
     
 	
 	

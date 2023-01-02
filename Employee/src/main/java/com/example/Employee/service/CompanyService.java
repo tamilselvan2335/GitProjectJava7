@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.example.Employee.Repository.CompanyRepository;
 import com.example.Employee.exception.ResourceNotFoundException;
 import com.example.Employee.model.Company;
-import com.example.Employee.model.EmployeeDetails;
 
 @Service
 public class CompanyService {

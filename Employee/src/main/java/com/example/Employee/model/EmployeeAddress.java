@@ -25,7 +25,7 @@ public class EmployeeAddress {
 	private String country;
 	
 	@OneToOne(mappedBy = "employeeAddress")
-	private EmployeeDetails employeeDetails;
+	private Employees employees;
 
 	public int getID() {
 		return ID;
@@ -59,12 +59,12 @@ public class EmployeeAddress {
 		this.country = country;
 	}
 
-	public EmployeeDetails getEmployeeDetails() {
-		return employeeDetails;
+	public Employees getEmployeeDetails() {
+		return employees;
 	}
 
-	public void setEmployeeDetails(EmployeeDetails employeeDetails) {
-		this.employeeDetails = employeeDetails;
+	public void setEmployeeDetails(Employees employees) {
+		this.employees = employees;
 	}
 	
 	

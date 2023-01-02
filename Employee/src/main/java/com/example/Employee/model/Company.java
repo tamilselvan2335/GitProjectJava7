@@ -2,12 +2,10 @@ package com.example.Employee.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,8 +29,8 @@ public class Company {
 	private String address;
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="Company_id", referencedColumnName="Company_id")
-    private List<EmployeeDetails> empDetails= new ArrayList<>();
+	@JoinColumn(name="C_id", referencedColumnName="Company_id")
+    private List<Employees> empDetails= new ArrayList<>();
 
 	public Company(){
 		
@@ -57,11 +55,11 @@ public class Company {
 	public void setC_id(int c_id) {
 		this.c_id = c_id;
 	}
-	public List<EmployeeDetails> getEmpDetails() {
+	public List<Employees> getEmpDetails() {
 		return empDetails;
 	}
 
-	public void setEmpDetails(List<EmployeeDetails> empDetails) {
+	public void setEmpDetails(List<Employees> empDetails) {
 		this.empDetails = empDetails;
 	}
 	

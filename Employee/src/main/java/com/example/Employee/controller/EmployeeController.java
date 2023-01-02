@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Employee.Repository.EmployeeRepository;
-import com.example.Employee.model.EmployeeDetails;
+import com.example.Employee.model.Employees;
 import com.example.Employee.service.EmployeeService;
 import com.example.Employee.exception.ResourceNotFoundException;
 
@@ -28,22 +27,22 @@ public class EmployeeController {
 	private EmployeeService employeeService; 
 	
 	@GetMapping("/show")
-	public List<EmployeeDetails> findAll(){
+	public List<Employees> findAll(){
 		return employeeService.findAll();		
 	}
 	
 	@PostMapping("/post")
-	public EmployeeDetails insertEmp(@RequestBody EmployeeDetails emp) {
+	public Employees insertEmp(@RequestBody Employees emp) {
 		return employeeService.save(emp);		
 	}
 	
 	@GetMapping("/show/{id}")
-	public ResponseEntity<EmployeeDetails> selectEmpById(@PathVariable int id) throws ResourceNotFoundException {
+	public ResponseEntity<Employees> selectEmpById(@PathVariable int id) throws ResourceNotFoundException {
 		return employeeService.insertEmp(id);
 	}
 	
 	@PatchMapping("/patch/{id}")
-	public ResponseEntity<EmployeeDetails> updateById(@PathVariable int id, @RequestBody EmployeeDetails emp) throws ResourceNotFoundException{
+	public ResponseEntity<Employees> updateById(@PathVariable int id, @RequestBody Employees emp) throws ResourceNotFoundException{
 		return employeeService.updateById(id, emp);
 	}
 	
