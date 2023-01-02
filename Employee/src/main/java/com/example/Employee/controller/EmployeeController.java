@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Employee.model.Employees;
 import com.example.Employee.service.EmployeeService;
 import com.example.Employee.exception.ResourceNotFoundException;
 
