@@ -33,11 +33,7 @@ public class Company {
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="Company_id", referencedColumnName="Company_id")
     private List<EmployeeDetails> empDetails= new ArrayList<>();
-	
-	
-	
-	
-	
+
 	public Company(){
 		
 	}
